@@ -12,6 +12,7 @@ import {
   faChevronRight,
   faPlayCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import Sidebar from "./sidebar";
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -19,11 +20,27 @@ export default function Navbar() {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="w-full md:w-[calc(100%-220px)] flex justify-between items-center py-6 fixed top-0 px-6 md:px-8 z-30 bg-[#18181b]">
-      {/* Mobile Menu Button */}
+    <div className="w-full sm:w-[calc(100%-220px)] flex justify-between items-center gap-6 py-6 fixed top-0 px-6 md:px-8 z-30 bg-[#18181b]">
       <button className="sm:hidden flex items-center" onClick={toggleSidebar}>
         <FontAwesomeIcon icon={faBars} fontSize={24} />
       </button>
+
+      {/* Sidebar */}
+      <div
+        className={`sm:hidden block fixed inset-0 z-40 bg-black bg-opacity-50 transition-opacity duration-300 ${
+          isSidebarOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={toggleSidebar}
+      >
+        <div
+          className={`w-64 h-full bg-[#18181b] text-white fixed top-0 left-0 transform transition-transform duration-300 ${
+            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Sidebar />
+        </div>
+      </div>
 
       {/* Logo */}
       <div className="sm:hidden block">
@@ -61,8 +78,8 @@ export default function Navbar() {
       {/* Right Actions */}
       <div className="flex items-center space-x-3">
         {/* National Anthem Section (Desktop Only) */}
-        <div className="sm:flex items-center gap-4 px-4 py-2 max-h-[46px] bg-[url('/images/MGLflag.png')] bg-cover bg-center rounded-full hidden">
-          <h2 className="font-semibold text-sm text-[#F3F4F6]">
+        <div className="md:flex items-center gap-4 px-4 py-2 max-h-[46px] bg-[url('/images/MGLflag.png')] bg-cover bg-center rounded-full hidden">
+          <h2 className="font-semibold text-sm text-[#F3F4F6] truncate whitespace-nowrap">
             Монгол улсын төрийн дуулал
           </h2>
           <div className="relative group cursor-pointer rounded-full bg-white text-center flex justify-center items-center">
@@ -99,11 +116,9 @@ export default function Navbar() {
               Хэрэглэгч
             </h2>
           </div>
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            fontSize={12}
-            className="lg:block hidden"
-          />
+          <div className="lg:block hidden">
+            <FontAwesomeIcon icon={faChevronDown} fontSize={12} />
+          </div>
           <div className="lg:block hidden"></div>
         </div>
       </div>

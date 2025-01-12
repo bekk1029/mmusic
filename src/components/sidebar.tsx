@@ -14,7 +14,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function Sidebar() {
   return (
-    <div className="fixed top-0 left-0 hidden h-screen w-full md:w-[220px] bg-[#27272A] md:flex flex-col pl-8 py-8">
+    <div className="w-[295px] sm:w-[220px] h-screen bg-[#27272A] flex flex-col pl-8 py-8">
       <div className="mb-14">
         <Link href="#">
           <Image
@@ -30,17 +30,17 @@ export default function Sidebar() {
       {/* Navigation Section */}
       <nav className="flex flex-col">
         {/* Main Navigation */}
-        <div className="flex flex-col gap-2 mb-9">
+        <div className="flex flex-col gap-2 sm:mb-9 mb-0">
           <SidebarLink href="#" icon={faHome} label="Нүүр" />
           <SidebarLink href="#" icon={faSearch} label="Хайх" />
         </div>
 
         {/* My Library Section */}
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-2">
           <h2 className="hidden sm:block text-base font-semibold text-[#525252] uppercase">
             Миний сан
           </h2>
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-2">
             <SidebarLink
               href="#"
               icon={faClockRotateLeft}

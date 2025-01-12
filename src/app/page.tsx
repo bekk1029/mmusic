@@ -8,12 +8,14 @@ import { ARTISTS_LIST } from "@/constant";
 export default function Home() {
   return (
     <div className="min-h-screen flex">
-      <div className="md:w-full md:max-w-[220px]">
-        <Sidebar />
+      <div className="sm:block hidden sm:w-full sm:max-w-[220px]">
+        <div className="fixed top-0 left-0 min-h-screen">
+          <Sidebar />
+        </div>
       </div>
       <div className="w-full overflow-scroll">
         <Navbar />
-        <main className="w-full flex flex-col gap-6 pt-24 pb-16 px-6 md:px-8 container max-w-1098">
+        <main className="w-full flex flex-col gap-6 pt-24 pb-16 px-6 md:px-8 container max-w-1536">
           <Banner />
 
           <CategoryList title="New Hot" list={ARTISTS_LIST} type="default" />
