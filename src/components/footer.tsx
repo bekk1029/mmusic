@@ -96,7 +96,7 @@ const FooterPlayer: React.FC = () => {
             <FontAwesomeIcon icon={faForwardStep} fontSize={20} />
           </button>
         </div>
-        <div className="md:flex items-center space-x-2 w-[300px] lg:min-w-[560px] hidden">
+        <div className="md:flex items-center space-x-2 w-[320px] lg:min-w-[560px] hidden">
           <span className="text-sm tracking-wide text-gray-300">00:56</span>
           <div className="w-full h-1 bg-[#27272A] rounded-full relative">
             <div
@@ -104,7 +104,7 @@ const FooterPlayer: React.FC = () => {
               style={{ width: "32%" }}
             />
           </div>
-          <span className="text-sm tracking-wide text-gray-300">03:46</span>
+          <span className="text-sm tracking-wide text-gray-300">03:42</span>
         </div>
         <div className="lg:flex items-center space-x-4 hidden">
           <button
