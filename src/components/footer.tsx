@@ -39,17 +39,15 @@ const FooterPlayer: React.FC = () => {
       <div className="flex items-center md:space-x-6 space-x-4">
         <div className="relative w-[35px] md:w-[45px] h-[36px] md:h-[46px] overflow-hidden rounded-lg">
           <Image
-            src="/images/artist-3.webp"
+            src="/images/artist-1.jpg"
             alt="Album Art"
             fill
             className="object-cover"
           />
         </div>
         <div className="flex flex-col">
-          <span className="text-[10px] md:text-xs font-normal">
-            MOONLIT FLOOR
-          </span>
-          <span className="text-xs md:text-sm font-bold text-white">LISA</span>
+          <span className="text-[10px] md:text-xs font-normal">All Night</span>
+          <span className="text-xs md:text-sm font-bold text-white">AMRA</span>
         </div>
         <div className="sm:flex space-x-2 items-center hidden">
           <button

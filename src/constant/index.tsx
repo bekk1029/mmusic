@@ -1,9 +1,5 @@
 export const ARTISTS_LIST = [
   {
-    image: "/images/artist-3.webp",
-    name: "LISA",
-  },
-  {
     image: "/images/artist-7.jpg",
     name: "VANDE",
   },
@@ -30,6 +26,10 @@ export const ARTISTS_LIST = [
   {
     image: "/images/artist-8.jpg",
     name: "Mmusic Podcast",
+  },
+  {
+    image: "/images/artist-3.avif",
+    name: "LISA",
   },
   {
     image: "/images/artist-9.jpg",

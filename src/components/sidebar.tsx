@@ -55,7 +55,7 @@ export default function Sidebar() {
         <div className="hidden sm:block">
           <div className="border border-[#52525B] my-2 mr-6" />
           <SidebarPlaylist
-            imageSrc="/images/artist-3.webp"
+            imageSrc="/images/artist-1.jpg"
             label="Муугүй лист"
           />
           <SidebarPlaylist
